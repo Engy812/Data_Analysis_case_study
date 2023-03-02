@@ -16,10 +16,11 @@ My role: As a data analyst who responsible for collecting, analyzing, and report
 fitBit fitness tracker data : this is public dataset on kaggle include 18 csv files generated between March 12,2016 and May 12,2016  made available through Mobius. its stored in a folder on computer devise . it may include bias and credability as it has  some limitation (only from thirty to thirtyfour eligible Fitbit users), ther is no geographicall data about users and short time period that data covers.
 
 
-## Data Process & Cleaning
+## Data phases
 
 Data files were devided ocoarding to activities time into (Day, Hours, and Mintes), than using Google sheets, Bigquery, Tablue, and python alongside with data analysis phases (ask, prepare, proces, analyze, act, and share) .
 
+## Data Prepareing & Processing
 
 ### Google spreadsheets & SQL
 - first seperate daily activities data into one folder then importing it into google sheets and ensuring that data in merged file are matcheing with data in individual files.
