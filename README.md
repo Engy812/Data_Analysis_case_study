@@ -1,13 +1,15 @@
 # Data_Analysis_case_study
 
-##Ask phases
+
+## Ask phases
+
 ### (Bellabeat)_How-Can-a-Wellness-Technology-Company-Play-It-Smart?
 Company: Bellabeat is a high-tech manufacturer of health-focused products for women.. Urška Sršen, cofounder and Chief Creative Officer of Bellabeat, believes that analyzing smart
 device fitness data could help unlock new growth opportunities for the company.
 
 My role: As a data analyst who responsible for collecting, analyzing, and reporting data that helps guide Bellabeat’s marketing strategy. 
 
-## Business_task:
+### Business_task:
  analyze smart device usage data in order to gain insight into how people are already using their smart devices.and provide recommendations for how these trends can inform Bellabeat marketing strategyby answering the following questions:
 
   1. What are some trends in smart device usage?
@@ -26,7 +28,7 @@ fitBit fitness tracker data : this is public dataset on kaggle include 18 csv fi
 Data files were sorted ocoarding to activities timeframe into subfolders (Day, Hours, and Mintes). dailyActivity_merged, dailyCalories_merged, dailyIntensities_merged, dailySteps_merged, sleepDay_merged, and weightLogInfo_merged were stored in day's folder, hourlyCalories_merged, hourlyIntensities_merged, and hourlySteps_merged were stored in hour's folder, and heartrate_seconds_merged, minuteCaloriesNarrow_merged, minuteIntensitiesNarrow_merged, minuteMETsNarrow_merged, minuteSleep_merged, and minuteStepsNarrow_merged were stored in minutes' folder. 
 
 
-## Data  Processing
+## Data Processing
 
 ### Google spreadsheets 
 
