@@ -32,6 +32,18 @@ Data files were sorted ocoarding to activities timeframe into subfolders (Day, H
 
 ### Google spreadsheets 
  - make sure that data is free from duplicated
- - the number of id partisipant are the same (33) except heartrate_seconds_merged and weightLogInfo_merged files have less number of partisipants
+ - the number of id partisipants are the same (33) except heartrate_seconds_merged and weightLogInfo_merged files have less number of partisipants
  - convert the type of numerical data into float with 2 digits after point in ailyActivity_merged and dailyIntensities_merged files
 
+### Sql
+ - build average summary table for each id using this sql code 
+
+```
+ select   id, avg(TotalSteps) as avg_step ,
+ count(id) as total_login,
+ avg(TotalDistance) as avg_distance, 
+ avg(Calories) as avg_calories
+from `case_study.dailyActivities`
+group by Id
+
+```
