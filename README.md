@@ -31,10 +31,7 @@ Data files were sorted ocoarding to activities timeframe into subfolders (Day, H
 ## Data Processing
 
 ### Google spreadsheets 
-
-- first seperate daily activities data into one folder then importing it into google sheets and ensuring that data in merged file are matcheing with data in individual files.
-- using functions like sum(), len(), and vlookup(), as well as tools like conditional formating to make sure that data are free from dublicate.
-- collect activities data measured in mintes into one folder than importing them to bigquery into database called "case_study"
-- collect activities data measured in hours into one folder than importing them to bigquery into database called "case_study"
-
+ - make sure that data is free from duplicated
+ - the number of id partisipant are the same (33) except heartrate_seconds_merged and weightLogInfo_merged files have less number of partisipants
+ - convert the type of numerical data into float with 2 digits after point in ailyActivity_merged and dailyIntensities_merged files
 
