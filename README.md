@@ -1,5 +1,7 @@
 # Data_Analysis_case_study
 
+   ![download](https://user-images.githubusercontent.com/107117693/223338806-497f771b-4d59-4d2c-bf29-7cfff12620fe.png)
+
 
 ## Ask phases
 
@@ -56,7 +58,7 @@ group by Id
 ![Screenshot 2023-03-07 075356](https://user-images.githubusercontent.com/107117693/223336614-3d7455a9-970a-44d3-85a8-51e45a37151a.png)
 
 
-- creat summary for each day in week per id using this code.
+- create summary for each activity in per day in week using this code.
 
 
 ```
