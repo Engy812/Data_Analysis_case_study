@@ -34,7 +34,7 @@ Data files were sorted ocoarding to activities timeframe into subfolders (Day, H
 
 ### Google spreadsheets 
  - make sure that data is free from duplicated
- - the number of id partisipants are the same (33) except heartrate_seconds_merged and weightLogInfo_merged files have less number of partisipants
+ - calculate the number of id partisipants in each file by pavoit table and make sure that is a consistant number in all files '33' except heartrate_seconds_merged and weightLogInfo_merged files that have less number of partisipants
  - convert the type of numerical data into float with 2 digits after point in ailyActivity_merged and dailyIntensities_merged files.
  - convert the 'ActivityHour' column in hourlyCalories_merged, hourlyIntensities_merged, and hourlySteps_merged files into hour formate to compare  activities to each hour in day.
  - convert the 'ActivityDay' column in dailyActivity_merged, dailyCalories_merged, dailyIntensities_merged, dailySteps_merged, and sleepDay_merged files into the name of day in the week formate to compare  activities to each day in week.
@@ -43,8 +43,28 @@ Data files were sorted ocoarding to activities timeframe into subfolders (Day, H
 ![Screenshot 2023-03-07 134815](https://user-images.githubusercontent.com/107117693/223413814-a3e1077f-adb4-4494-8772-809c595daf1d.png)
 
 
+## Analyze Phases
+
+### Googlesheets
+
+- using pivote table in hourlyCalories_merged, hourlyIntensities_merged, and hourlySteps_merged to summary total activities (calories, steps, and intensity) per evry hour in day
+
+
+![SUM of Calories Per Hour (1)](https://user-images.githubusercontent.com/107117693/223221304-69ff0637-a4f9-4059-a902-723751044d33.png)
+
+
+
+![SUM of Total Intensity Per Hour](https://user-images.githubusercontent.com/107117693/223220258-cd1fa7a2-cf72-4282-90b0-c6112365bf73.png)
+
+
+
+![Total Steps Per Hour](https://user-images.githubusercontent.com/107117693/223220379-12ec5629-64fa-4f4c-a2ef-3cfdd67bf8ef.png)
+
+
+
 ### Sql
- - build average summary table for each id using this sql code 
+
+ - calculate the average  table for each daily activity and the total number of id login record using this sql code. 
 
 ```
  select id, avg(TotalSteps) as avg_step ,
@@ -59,7 +79,7 @@ group by Id
 ![Screenshot 2023-03-07 075356](https://user-images.githubusercontent.com/107117693/223336614-3d7455a9-970a-44d3-85a8-51e45a37151a.png)
 
 
-- create summary for each activity in per day in week using this code.
+- calculate the average of each activity in per day of week using this code.
 
 
 ```
@@ -74,18 +94,27 @@ group by day_in_week,
 ![Screenshot 2023-03-07 075258](https://user-images.githubusercontent.com/107117693/223336764-de96e1fb-fd78-42a7-b083-1d14476b6971.png)
 
 
+- calculate the averge and varience of daily intensity level  in minutes per day, aalso, you will find the varience of each level is bigger as the result of the difference between users activities, and the number of duration they take in each level.
+```
+select trim(dayinWeek)  as day,
+ avg(SedentaryMinutes) as avg_seden ,variance(distinct SedentaryMinutes) as var_seden,
+ avg(LightlyActiveMinutes) as avg_light ,variance(distinct LightlyActiveMinutes) as var_light,
+  avg(FairlyActiveMinutes) as avg_fair  ,variance(distinct FairlyActiveMinutes) as var_fair,
+   avg(VeryActiveMinutes) as avg_ver, variance(distinct VeryActiveMinutes) as var_ver
+from `case_study.daily_intensity`
+group  by dayinWeek
+```
+![Screenshot 2023-03-07 161859](https://user-images.githubusercontent.com/107117693/223449155-6eccaf53-7b9a-4b58-85be-a59417d5ce0a.png)
 
-## Analyze Phases
-
-- using pivote table in hourlyCalories_merged, hourlyIntensities_merged, and hourlySteps_merged to summary total activities (calories, steps, and intensity) per evry hour in day
 
 
-![SUM of Calories Per Hour (1)](https://user-images.githubusercontent.com/107117693/223221304-69ff0637-a4f9-4059-a902-723751044d33.png)
-
-
-
-![SUM of Total Intensity Per Hour](https://user-images.githubusercontent.com/107117693/223220258-cd1fa7a2-cf72-4282-90b0-c6112365bf73.png)
-
-
-
-![Total Steps Per Hour](https://user-images.githubusercontent.com/107117693/223220379-12ec5629-64fa-4f4c-a2ef-3cfdd67bf8ef.png)
+- calculate the averge level of daily active distance per day
+ ```
+select trim(dayinWeek)  as day,
+ avg(SedentaryActiveDistance) as avg_seden ,
+  avg(LightActiveDistance) as avg_light ,
+   avg(ModeratelyActiveDistance) as avg_fair ,
+    avg(VeryActiveDistance) as avg_ver
+from `case_study.daily_intensity`
+group  by dayinWeek
+```
