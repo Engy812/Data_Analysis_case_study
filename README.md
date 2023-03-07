@@ -38,8 +38,9 @@ Data files were sorted ocoarding to activities timeframe into subfolders (Day, H
  - convert the type of numerical data into float with 2 digits after point in ailyActivity_merged and dailyIntensities_merged files.
  - convert the 'ActivityHour' column in hourlyCalories_merged, hourlyIntensities_merged, and hourlySteps_merged files into hour formate to compare  activities to each hour in day.
  - convert the 'ActivityDay' column in dailyActivity_merged, dailyCalories_merged, dailyIntensities_merged, dailySteps_merged, and sleepDay_merged files into the name of day in the week formate to compare  activities to each day in week.
- 
+ - insert 'day in week ' in both dailyActivity_merged and dailyIntensities_merged and apply day's name formate.
 
+![Screenshot 2023-03-07 134815](https://user-images.githubusercontent.com/107117693/223413814-a3e1077f-adb4-4494-8772-809c595daf1d.png)
 
 
 ### Sql
