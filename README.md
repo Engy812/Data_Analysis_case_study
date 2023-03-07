@@ -33,7 +33,9 @@ Data files were sorted ocoarding to activities timeframe into subfolders (Day, H
 ### Google spreadsheets 
  - make sure that data is free from duplicated
  - the number of id partisipants are the same (33) except heartrate_seconds_merged and weightLogInfo_merged files have less number of partisipants
- - convert the type of numerical data into float with 2 digits after point in ailyActivity_merged and dailyIntensities_merged files
+ - convert the type of numerical data into float with 2 digits after point in ailyActivity_merged and dailyIntensities_merged files.
+ - convert the 'ActivityHour' column in hourlyCalories_merged, hourlyIntensities_merged, and hourlySteps_merged files into hour formate to compare  activities to each hour in day.
+ - convert the 'ActivityDay' column in dailyActivity_merged, dailyCalories_merged, dailyIntensities_merged, dailySteps_merged, and sleepDay_merged files into the name of day in the week formate to compare  activities to each day in week.
  
 
 
@@ -50,6 +52,23 @@ from `case_study.dailyActivities`
 group by Id
 
 ```
+
+![Screenshot 2023-03-07 075356](https://user-images.githubusercontent.com/107117693/223336614-3d7455a9-970a-44d3-85a8-51e45a37151a.png)
+
+
+- creat summary for each day in week per id using this code.
+
+
+```
+select day_in_week,
+ avg(TotalSteps) as avg_step  
+ count(id) as total_login,
+ avg(TotalDistance) as avg_distance,
+ avg(Calories) as avg_calories 
+from `case_study.daily_activity`
+group by day_in_week,
+```
+![Screenshot 2023-03-07 075258](https://user-images.githubusercontent.com/107117693/223336764-de96e1fb-fd78-42a7-b083-1d14476b6971.png)
 
 
 
