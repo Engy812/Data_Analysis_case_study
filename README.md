@@ -34,19 +34,7 @@ Data files were sorted ocoarding to activities timeframe into subfolders (Day, H
  - make sure that data is free from duplicated
  - the number of id partisipants are the same (33) except heartrate_seconds_merged and weightLogInfo_merged files have less number of partisipants
  - convert the type of numerical data into float with 2 digits after point in ailyActivity_merged and dailyIntensities_merged files
- - using pivote table in hourlyCalories_merged, hourlyIntensities_merged, and hourlySteps_merged to summary total activities (calories, steps, and intensity) per evry hour in day
-
-
-![SUM of Calories Per Hour (1)](https://user-images.githubusercontent.com/107117693/223221304-69ff0637-a4f9-4059-a902-723751044d33.png)
-
-
-
-![SUM of Total Intensity Per Hour](https://user-images.githubusercontent.com/107117693/223220258-cd1fa7a2-cf72-4282-90b0-c6112365bf73.png)
-
-
-
-![Total Steps Per Hour](https://user-images.githubusercontent.com/107117693/223220379-12ec5629-64fa-4f4c-a2ef-3cfdd67bf8ef.png)
-
+ 
 
 
 
@@ -63,3 +51,19 @@ group by Id
 
 ```
 
+
+
+## Analyze Phases
+
+- using pivote table in hourlyCalories_merged, hourlyIntensities_merged, and hourlySteps_merged to summary total activities (calories, steps, and intensity) per evry hour in day
+
+
+![SUM of Calories Per Hour (1)](https://user-images.githubusercontent.com/107117693/223221304-69ff0637-a4f9-4059-a902-723751044d33.png)
+
+
+
+![SUM of Total Intensity Per Hour](https://user-images.githubusercontent.com/107117693/223220258-cd1fa7a2-cf72-4282-90b0-c6112365bf73.png)
+
+
+
+![Total Steps Per Hour](https://user-images.githubusercontent.com/107117693/223220379-12ec5629-64fa-4f4c-a2ef-3cfdd67bf8ef.png)
