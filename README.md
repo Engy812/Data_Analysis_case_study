@@ -43,7 +43,7 @@ Data files were sorted ocoarding to activities timeframe into subfolders (Day, H
 ![Screenshot 2023-03-07 134815](https://user-images.githubusercontent.com/107117693/223413814-a3e1077f-adb4-4494-8772-809c595daf1d.png)
 
 
-## Analyze Phases
+## Analyze and Share Phases
 
 ### Googlesheets
 
@@ -108,13 +108,16 @@ group  by dayinWeek
 
 
 
-- calculate the averge level of daily active distance per day
+- calculate the averge and varience of daily active level distance per day
  ```
 select trim(dayinWeek)  as day,
- avg(SedentaryActiveDistance) as avg_seden ,
-  avg(LightActiveDistance) as avg_light ,
-   avg(ModeratelyActiveDistance) as avg_fair ,
-    avg(VeryActiveDistance) as avg_ver
+ avg(SedentaryActiveDistance) as avg_seden ,variance(DISTINCT SedentaryActiveDistance) as var_des_seden,
+  avg(LightActiveDistance) as avg_light ,variance(DISTINCT LightActiveDistance) as var_des_light,
+   avg(ModeratelyActiveDistance) as avg_fair ,variance(DISTINCT ModeratelyActiveDistance) as var_des_modera,
+    avg(VeryActiveDistance) as avg_ver,variance(DISTINCT VeryActiveDistance) as var_des_ver
 from `case_study.daily_intensity`
 group  by dayinWeek
+
 ```
+![Screenshot 2023-03-07 164212](https://user-images.githubusercontent.com/107117693/223455488-367fbef9-076f-4355-a6ca-41556500c63d.png)
+
