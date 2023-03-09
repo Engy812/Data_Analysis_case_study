@@ -150,3 +150,6 @@ group  by dayinWeek
 - as the lack and shortage of data, **I reccommend that increase the rang of question registration about the user for example geographical data, and age** .
 
 - there is general data about regular activities per hour, however, it has't usefull as we cannot determine the events that lead to this activities, **so i reccommend to provide organizer application to track the events that lead user to, for example, record this number of steps** .
+
+- as Bellabeat is health-focused products for women, it well be helpfull if if we proide **'baby app' to provide reports about health conditions of gregnent women and notification reminder of her Medication schedule**. 
+ 
