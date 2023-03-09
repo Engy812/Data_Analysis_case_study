@@ -145,4 +145,4 @@ group  by dayinWeek
 
 ## Act Phase
 
-- as the lack and shortage of data, i # reccommend that increase the rang of question registration about the user 
+- as the lack and shortage of data, @I reccommend that increase the rang of question registration about the user 
