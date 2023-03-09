@@ -47,18 +47,11 @@ Data files were sorted ocoarding to activities timeframe into subfolders (Day, H
 
 ### Googlesheets
 
-- using pivote table in hourlyCalories_merged, hourlyIntensities_merged, and hourlySteps_merged to summary total activities (calories, steps, and intensity) per evry hour in day
+- using pivote table in hourlyCalories_merged, hourlyIntensities_merged, and hourlySteps_merged to summaries total activities (calories, steps, and intensity) per evry hour in day and collect the number of hours per evry id.
 
 
-![SUM of Calories Per Hour (1)](https://user-images.githubusercontent.com/107117693/223221304-69ff0637-a4f9-4059-a902-723751044d33.png)
+![Screenshot 2023-03-09 112112](https://user-images.githubusercontent.com/107117693/223977460-24473c13-3ac5-48c7-85ea-2d51324b1a7b.png)
 
-
-
-![SUM of Total Intensity Per Hour](https://user-images.githubusercontent.com/107117693/223220258-cd1fa7a2-cf72-4282-90b0-c6112365bf73.png)
-
-
-
-![Total Steps Per Hour](https://user-images.githubusercontent.com/107117693/223220379-12ec5629-64fa-4f4c-a2ef-3cfdd67bf8ef.png)
 
 
 
@@ -95,6 +88,7 @@ group by day_in_week,
 
 
 - calculate the averge and varience of daily intensity level  in minutes per day, aalso, you will find the varience of each level is bigger as the result of the difference between users activities, and the number of duration they take in each level.
+- calculate the total average intencity by sum the average of each level and devide it by 4 (the number of level) to get the average intnsity number for each day in week.
 ```
 select trim(dayinWeek)  as day,
  avg(SedentaryMinutes) as avg_seden ,variance(distinct SedentaryMinutes) as var_seden,
@@ -104,8 +98,9 @@ select trim(dayinWeek)  as day,
 from `case_study.daily_intensity`
 group  by dayinWeek
 ```
-![Screenshot 2023-03-07 161859](https://user-images.githubusercontent.com/107117693/223449155-6eccaf53-7b9a-4b58-85be-a59417d5ce0a.png)
 
+
+![Screenshot 2023-03-09 115144](https://user-images.githubusercontent.com/107117693/223985220-527a7acf-4f66-4e3d-92e0-e0874dd4a90b.png)
 
 
 - calculate the averge and varience of daily active level distance per day
@@ -120,4 +115,28 @@ group  by dayinWeek
 
 ```
 ![Screenshot 2023-03-07 164212](https://user-images.githubusercontent.com/107117693/223455488-367fbef9-076f-4355-a6ca-41556500c63d.png)
+
+
+
+### Sharing phases summary
+
+
+
+
+
+
+![number of hours per id](https://user-images.githubusercontent.com/107117693/223977508-a63e89f5-5599-4324-98f5-afc445ce3b15.png)
+
+
+
+![SUM of Calories Per Hour (1)](https://user-images.githubusercontent.com/107117693/223221304-69ff0637-a4f9-4059-a902-723751044d33.png)
+
+
+
+![SUM of Total Intensity Per Hour](https://user-images.githubusercontent.com/107117693/223220258-cd1fa7a2-cf72-4282-90b0-c6112365bf73.png)
+
+
+
+![Total Steps Per Hour](https://user-images.githubusercontent.com/107117693/223220379-12ec5629-64fa-4f4c-a2ef-3cfdd67bf8ef.png)
+
 
