@@ -120,15 +120,14 @@ group  by dayinWeek
 
 ### Sharing phases summary
 
-
-
-
+because of the shortage of data and lack of sum information , i analyzed data debends on weekdays and hours to understand the patterns that user make every day, and this what i have foun:
+ -the most total number of hours when user consume to monitor there activities are lay between from 600 to 800 hours.
 
 
 ![number of hours per id](https://user-images.githubusercontent.com/107117693/223977508-a63e89f5-5599-4324-98f5-afc445ce3b15.png)
 
 
-
+ - despite the low number of intensity and less activity from 12:00 am to 4:00 am m there are still large number of calories 
 ![SUM of Calories Per Hour (1)](https://user-images.githubusercontent.com/107117693/223221304-69ff0637-a4f9-4059-a902-723751044d33.png)
 
 
