@@ -120,7 +120,8 @@ group  by dayinWeek
 
 ### Sharing phases summary
 
-because of the shortage of data and lack of sum information , i analyzed data debends on weekdays and hours to understand the patterns that user make every day, and this what i have foun:
+because of the shortage of data and lack of sum information , i analyzed data debends on weekdays and hours to understand the patterns that user make every day, and this what i have found:
+
   -the most total number of hours when user consume to monitor there activities are lay between from 600 to 800 hours.
 
 
