@@ -135,9 +135,13 @@ group  by dayinWeek
 ```
 ![Screenshot 2023-03-07 164212](https://user-images.githubusercontent.com/107117693/223455488-367fbef9-076f-4355-a6ca-41556500c63d.png)
 
+
+### Tablue
+
+- using tableau to visualize this data in term of weekdays
+
 ![Dashboard 1 (1)](https://user-images.githubusercontent.com/107117693/224027397-78c75f82-220a-488e-9ce9-4273e8e5230d.png)
 
 
-### Sharing phases summary
+##Act Phase
 
-because of the shortage of data and lack of sum information , i analyzed data debends on weekdays and hours to understand the patterns that user make every day, and this what i have found:
