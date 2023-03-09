@@ -122,7 +122,7 @@ group  by dayinWeek
 ![Screenshot 2023-03-09 115144](https://user-images.githubusercontent.com/107117693/223985220-527a7acf-4f66-4e3d-92e0-e0874dd4a90b.png)
 
 
-- calculate the averge and varience of daily active level distance per day
+- calculate the averge and varience of daily activiy levels in distance per day
  ```
 select trim(dayinWeek)  as day,
  avg(SedentaryActiveDistance) as avg_seden ,variance(DISTINCT SedentaryActiveDistance) as var_des_seden,
@@ -138,10 +138,11 @@ group  by dayinWeek
 
 ### Tablue
 
-- using tableau to visualize this data in term of weekdays
+- using tableau to visualize this data in term of weekdays and its measures.
 
 ![Dashboard 1 (1)](https://user-images.githubusercontent.com/107117693/224027397-78c75f82-220a-488e-9ce9-4273e8e5230d.png)
 
 
-##Act Phase
+## Act Phase
 
+- as the lack and shortage of data, i # reccommend that increase the rang of question registration about the user 
